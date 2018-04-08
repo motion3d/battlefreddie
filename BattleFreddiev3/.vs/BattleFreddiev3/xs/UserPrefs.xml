@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{29058BFC-CB01-1A64-DB1A-2E23860870B5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Swipe.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="11" Column="5" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="29" Column="66" />
+      <File FileName="Assets/Scripts/Swipe.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BattleFreddiev3 PreferredExecutionTarget="Unity.Editor" />
