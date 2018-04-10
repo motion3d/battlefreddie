@@ -28,16 +28,16 @@ public class PlayerController : MonoBehaviour {
 
         // moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0f, Input.GetAxis("Vertical") * moveSpeed);
 
-        /*
+
         if (swipeControls.SwipeLeft)
             desiredPosition += Vector3.left;
         if (swipeControls.SwipeRight)
             desiredPosition += Vector3.right;
         if (swipeControls.SwipeUp)
-            desiredPosition += Vector3.forward;
+            desiredPosition += Vector3.up;
         if (swipeControls.SwipeDown)
-            desiredPosition += Vector3.back;
-        */
+            desiredPosition += Vector3.down;
+        
 
         if (swipeControls.SwipeLeft)
             Debug.Log("LEFT!!!");
@@ -55,12 +55,15 @@ public class PlayerController : MonoBehaviour {
 
         if (controller.isGrounded)
         {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, moveDirection.y, 0f);
+            //            moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, moveDirection.y, 0f);
+            moveDirection = desiredPosition;
 
-            if (Input.GetButtonDown("Jump"))
+//            if (Input.GetButtonDown("Jump"))
+            if (swipeControls.Tap)
             {
                 moveDirection.y = jumpForce;
             }
+
         }
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale);
         controller.Move(moveDirection * Time.deltaTime);
